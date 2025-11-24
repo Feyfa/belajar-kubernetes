@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-with-annotations
+  labels:
+    team: product
+    version: 1.0.1
+    environtment: production
+  annotations:
+    kata-kata-hari-ini: ente kiper terbaik di dunia
+    pesan-untuk-developer: jangan lupa ngopi masbro
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
